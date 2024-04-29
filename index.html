@@ -1,54 +1,30 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <!-- Definição do conjunto de caracteres e da viewport -->
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Título da página -->
     <title>Conversor de Temperatura</title>
-    <!-- Inclusão do arquivo de estilos CSS -->
     <link rel="stylesheet" href="css/styles.css">
-    <!-- Pré-conexão com o Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <!-- Inclusão das fontes Google -->
-    <link href="https://fonts.googleapis.com/css2?family=Courgette&#x26;family=Montserrat:ital,wght@0,100..900;1,100..900&#x26;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&#x26;display=swap" rel="stylesheet">
-    <!-- Inclusão do script Modernizr para detecção de recursos do navegador -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
-  </head>
-    <!-- Divs para as bolhas de fundo -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Conversor de Temperatura</h1>
+    </header>
+    <div id="content-wrapper">
+        <input type="number" id="temperaturaInput">
+        <div class="buttons">
+            <button id="celsiusButton">Converter para Celsius</button>
+            <button id="fahrenheitButton">Converter para Fahrenheit</button>
+        </div>
+    </div>
+    <footer>
+        <p>© 2024 Marcus Witte</p>
+    </footer>
     <div id='bubble'></div>
     <div id='bubble2'></div>
-    <header>
-      <!-- Título principal -->
-      <h1>Conversor de Temperatura</h1>
-    </header>
-    <body>
-      <div id="content-wrapper">
-        <input type="number" id="temperaturaInput">
-        <!-- Botões -->
-        <div class="buttons">
-          <button onclick="converterParaCelsius()">Converter para Celsius</button>
-          <button onclick="converterParaFahrenheit()">Converter para Fahrenheit</button>
-        </div>
-        <p id="resultado"></p>
-      </div>
-    </body>
-    <footer>
-      <p></p>
-    </footer>
-    <script type="text/javascript">
-      function converterParaCelsius() {
-        const temperaturaFahrenheit = parseFloat(document.getElementById('temperaturaInput').value);
-        const temperaturaCelsius = (temperaturaFahrenheit - 32) * 5 / 9;
-        document.getElementById('resultado').innerHTML = `${temperaturaFahrenheit}°F equivale a ${temperaturaCelsius.toFixed(2)}°C.`;
-      }
-
-      function converterParaFahrenheit() {
-        const temperaturaCelsius = parseFloat(document.getElementById('temperaturaInput').value);
-        const temperaturaFahrenheit = (temperaturaCelsius * 9 / 5) + 32;
-        document.getElementById('resultado').innerHTML = `${temperaturaCelsius}°C equivale a ${temperaturaFahrenheit.toFixed(2)}°F.`;
-      }
-    </script>
-  </body>
+</body>
 </html>

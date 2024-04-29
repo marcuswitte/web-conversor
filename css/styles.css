@@ -48,6 +48,8 @@ footer {
 .buttons {
   margin-top: 20px;
   z-index: 10;
+  justify-content: center;
+  display: flex;
 }
 
 .buttons button {

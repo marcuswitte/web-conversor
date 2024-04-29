@@ -33,7 +33,7 @@ footer {
   background-color: lightskyblue;
   z-index: 10;
   text-align: center;
-  padding: 10px;
+  padding: 5px;
 }
 
 #content-wrapper {
@@ -71,7 +71,6 @@ footer {
 }
 
 html {
-  overflow: hidden; /* This line prevents scrolling */
   height: 100%;
   background: radial-gradient(ellipse at bottom, #1e62b1 0%, #268bff 100%);
   overflow: hidden;
@@ -124,15 +123,15 @@ html {
   }
 }
 @media only screen and (max-width: 600px) {
-  /* Adjust the button alignment for smaller screens */
-  .buttons {
-    flex-direction: column;
-    align-items: center;
+    /* Adjust the button alignment for smaller screens */
+    .buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    /* Add margin to the buttons for spacing */
+    .buttons button {
+      margin-top: 10px;
+    }
   }
-
-  /* Add margin to the buttons for spacing */
-  .buttons button {
-    margin-top: 10px;
-  }
-}
 /*# sourceMappingURL=styles.css.map */

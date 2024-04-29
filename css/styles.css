@@ -71,6 +71,7 @@ footer {
 }
 
 html {
+  overflow: hidden; /* This line prevents scrolling */
   height: 100%;
   background: radial-gradient(ellipse at bottom, #1e62b1 0%, #268bff 100%);
   overflow: hidden;
